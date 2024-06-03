@@ -1,0 +1,33 @@
+@use "../../styles/foundation/" as f;
+
+.results-layout {
+  grid-row-gap: 0;
+  margin-top: 6px;
+  .results {
+    grid-column: 1 / span 6;
+    margin-bottom: 20px;
+    background-color: white;
+    min-height: -webkit-fill-available;
+  }
+  .breadcrumbs {
+    grid-column: 1 / span 6;
+  }
+}
+
+.results-layout.grid {
+  grid-row-gap: 6px;
+}
+
+@media screen and #{f.$mq-tablet} {
+  .results-layout {
+    .results {
+      grid-column: 2 / span 10;
+    }
+    .breadcrumbs {
+      grid-column: 2 / span 10;
+    }
+    .product-detail {
+      grid-column: 2 / span 10;
+    }
+  }
+}
